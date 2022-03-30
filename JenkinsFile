@@ -5,10 +5,11 @@ pipeline {
                 stage('write-to-db') {
                         steps {
 													sh ''' 
+													git checkout main
 													echo "ciao" >> file.txt
 													git add file.txt
 													git commit -m "update"
-													git push origin HEAD:main
+													git push
 													''' 
                         }
                 }
