@@ -8,7 +8,7 @@ pipeline {
 													echo "ciao" >> file.txt
 													git add file.txt
 													git commit -m "update"
-													git push 
+													git push origin HEAD:
 													''' 
                         }
                 }
