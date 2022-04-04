@@ -65,7 +65,7 @@ latest_package_version=$(sqlite3 $D "select max(version) from flavor_packages wh
 
 add_version(){
 new_version=$(($latest_package_version + 1))
-sqlite3 $D "insert into flavor_packages (galaxy_version, flavor_name, version) values ('$I','$G','$F','$new_version');"
+sqlite3 $D "insert into flavor_packages (image_version, galaxy_version, flavor_name, version) values ('$I','$G','$F','$new_version');"
 }
 print_db(){
         sqlite3 $D "select * from flavor_packages;"
